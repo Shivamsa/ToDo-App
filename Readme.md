@@ -1,1 +1,3 @@
-Todo app using Javascript HTML CSS
+Todo-List-App
+Build a Todo List App in HTML CSS JavaScript.
+
