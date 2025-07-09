@@ -20,7 +20,7 @@ A simple and elegant ToDo List application built with **HTML**, **CSS**, and **J
 ```bash
 git clone https://github.com/Shivamsa/todo-list.git
 
-### 2. Open the Project
+📝 Open the Project
 Just open the index.html file in your browser.
 No server required — it’s a fully frontend app!
 
