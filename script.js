@@ -7,7 +7,7 @@ const filterOption = document.querySelector(".filter-todo");
 //Event Listeners
 //document.addEventListener("DOMContentLoaded",getLocalTodos);
 todoButton.addEventListener("click",addTodo);
-//to doList.addEventListener("click",deleteCheck);
+todoList.addEventListener("click",deleteCheck);
 //filterOption.addEventListener("change",filterTodo);
 
 //Functions
@@ -39,10 +39,28 @@ function addTodo(event){
     trashButton.innerHTML=`<i class="fasfa-check-circle"></li>`;
     trashButton.classList.add("trash-btn");
     todoDiv.appendChild(trashButton);
-
+ 
     //Append to List
     todoList.appendChild(todoDiv);
 
     //Clear todo imput value
     todoInput.value="";
+} 
+
+function deleteCheck(e){
+    const item = e.target;
+    //Delete todo
+    if(item.classList[0]=="trash-btn"){
+        const todo = item.parentElement;
+        todo.classList.add("fall");
+        todo.addEventListener("transitionend",function(){
+            todo.remove();
+        })
+    }
+
+    //CheckMark
+    if(item.classList[0]=="complete-btn"){
+        const todo = item.parentElement;
+        todo.classList.toggle("completed");
+    }
 }
