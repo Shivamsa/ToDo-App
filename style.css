@@ -149,8 +149,8 @@ select{
     transition:all 0.3s ease ;
 }
 
-.select::hover::after{
-    background: white;
+.select:hover::after{
+    background: rgb(218, 217, 217);
     color: rgb(255, 200, 0);
 }
 
